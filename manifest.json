@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "DTU MSc Access Checker (Beta)",
+  "version": "0.1.0",
+  "description": "Matches your DTU Study Planner courses against DTU MSc programme prerequisites and shows missing courses.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://studieplan.dtu.dk/*", "https://www.dtu.dk/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://studieplan.dtu.dk/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
